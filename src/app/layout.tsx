@@ -1,8 +1,7 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
-import './globals.css'
-import clsx from 'clsx'
-const inter = Inter({ subsets: ['latin'] })
+
+import '@/app/ui/global.css'
+
 
 export const metadata: Metadata = {
   title: 'Auxibee | Portfolio',
@@ -16,7 +15,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={clsx(inter.className, 'text-gray-700')}>{children}</body>
+      <body>{children}</body>
     </html>
   )
 }

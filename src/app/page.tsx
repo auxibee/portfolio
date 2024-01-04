@@ -1,12 +1,14 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import hero from '@/app/logo.svg'
-import Header from '@/ui/header'
-import Footer from '@/ui/footer'
-import { blogs } from '@/lib/blogs'
+import Header from '@/app/ui/header'
+
+import { blogs } from '@/app/lib/blogs'
+import Footer from '@/app/ui/footer'
 
 
 export default function Home() {
+  
  
   return (
         <>
@@ -47,7 +49,7 @@ export default function Home() {
             <div className='flex flex-wrap'>
               <h2 className='font-bold text-3xl mb-3 w-full md:w-1/2'> Latest Blog Articles </h2>
               <div className='w-full md:w-1/2'>
-                {blogs.map((blog) => <Link key={blog.id} className='block' href={blog.title}>How This site is made</Link>)}
+                {blogs.map((blog) => <Link key={blog.id} className='block my-4 font-light underline' href={`/blog/${blog.link}`}>{blog.title}</Link>)}
               </div>
             </div>
           </section>

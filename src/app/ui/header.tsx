@@ -1,9 +1,9 @@
 import Link from "next/link";
+import Container from "./container";
 
 export default function Header(){
     return (
-        <nav>
-             <div className='container mx-auto my-2 px-6 flex justify-between items-center'>
+     <div className='container mx-auto my-2 px-6 flex justify-between items-center'>
                 <div><Link href='/' className='font-bold text-2xl lg:text-4xl'>Auxibee</Link></div>
                 <div>
                   <ul className='flex'>
@@ -13,7 +13,7 @@ export default function Header(){
                     <li className='bg-violet-500  rounded'><Link href="/blog" className='px-6  text-white font-bold'> Blogs </Link></li>
                   </ul>
                 </div>
-             </div>
-          </nav>
+             </div> 
     )
 }
+
